@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Figura en HTML</title>
+  <style>
+    body {
+font-family: Arial, sans-serif;
+text-aling: center;
+margin: 40px;
+    }
+figure {
+    border: 1px solid #ccc;
+    padding: 10 px;
+    display: inline-block;
+}    
+figcaption {
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+}
+  </style>  
+</head>   
+<body>
+    <h1> Ejemplo de uso de &lt;figure&gt; en HTML</h1>
+    <figure>
+        <!--Imagen principal con descripción-->
+        <img src="montaña.jpg" alt="Montaña nevada en invierno" width="400" />
+        <!--Descripción debajo de la imagen-->
+        <figcaption>Montaña nevada en el Himalaya durante invierno              </figcaption>
+    </figure>
+    <!--Tambiém se puede usar para código-->
+    <figure>
+        <pre> 
+        <code>funtion saludo () {
+            return "¡Hola Mundo!";
+        }</code>    
+        </pre>
+        <figcaption>Función Javascript básica de saludo</figcaption>
+    </figure>
+    <details>
+     <summary>¿Qué es HTML semántico?</summary>
+     <p>
+HTML semántico es el uso de etiqueta HTML que describen claramente el propósito del contenido,
+ como <code>&lt;article&gt;</code>, <code>&lt; nav&gt;</code> o <code>&lt;footer&gt;</code> en lugar de solo <code>&lt;div&gt;</code>
+</p>   
+    </details>
+    <details open>
+   <summary>¿Por qué es importante la accesiilidad?</summary> 
+   <p> La accesibilidad garantiza que todas las personas, incluyendo aquellas con discapacidades visuales, auditivas o
+    motoras, pueden navegar y uar nuestros sitios web. usar etiquetas semánticas y atributos ARIA ayuda a los lectores
+de pantalla a interpretar corecctamente el contenido </p>    
+    </details>
+<!--Fecha simple con formato legible-->
+<p>La conferencia será el <time datetime="2024-11-15">15 de noviembre</time>.</p>
+
+<!--Fecha y hora específica-->
+<p>El evento comienza a las <time datetime="2024-11-15T18:00">6:00 PM</time>.</p>
+
+<!--Hora con zona horaria-->
+<p>Streaming en vivo: <time datetime="2024-11-15T18:00-06:00">6:00 PM CTS</time>.</p>
+
+<!--Fecha relativa (semana)-->
+<p> Publicación de resultados: <time datetime="2024-W45>Semana 45</time>.</p>
+
+<!--Duración (2 horas y 30 minutos)-->
+<p>Duración del evento: <time datetime="PT2H30M">2 horas 30 minutos</time> </p>
+
+<!-- PROGRESS: Descarga de archivo-->
+ <p>Procesando datos...</p>
+ <progress value="75" max="100">75%</progress>
+ <p><mark>75% completado</mark></p>
+
+ <!-- PROGRESS: Procesos indeterminado-->
+<p>Procesando datos...</p>
+<progress max="100"></progress>
+<!--Sin value, muestra animación de carga-->
+
+<!-- METER: Calificación de producto-->
+ <p>Calificación del producto: <meter valune="4.5" min="0" max="5">4.5/5</meter></p>
+
+ <!--METER: Uso de disco-->
+<p>Espacio de disco: <meter value="85" min="0" max="100" low="30" high="70">85%</meter></p>
+
+<!--METER: Rango con optium-->
+<p> Temperatura ideal: <meter value="22" min="15" max="30" optinum="20">20°C</meter></p>
+<form>
+<!-- Input de fecha-->
+ <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+ <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
+
+<!-- Input de email con validación-->
+<label for="email">Correo electrónico:</label>
+<input type="email" id="email" name="email" required />
+
+<!--Input de rango (1-100)-->
+<label for="satisfacción">Nivel desatisfacción (1-100):</label>
+<input type="range" id="satisfacción" name="satisfacción" min="1" max="100" value="50" />
+
+<!-- Input de archivo-->
+ <label for="archivo">Subir documento (PDF o imagen):</label>
+<input type="file" id="archivo" name="archivo" accept=".pdf,image/*" />
+
+<!-- Input color-->
+ <label for="color-favorito">Color favorito:</label>
+ <input type="color" id="color-favorito" name="color-favorito" value="#ff0000" />
+
+<!-- Input númerico-->
+ <label for="cantidad">Cantidad:</label>
+ <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1" />
+
+<button type="submit">Enviar</button>
+
+</form>
+</body> 
+</html>
